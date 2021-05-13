@@ -1,14 +1,19 @@
 <template>
   <v-app dark>
-    <h1 v-if="error.statusCode === 404">
-      {{ pageNotFound }}
-    </h1>
-    <h1 v-else>
-      {{ otherError }}
-    </h1>
-    <NuxtLink to="/">
-      Home page
-    </NuxtLink>
+    <v-container class="mx-auto">
+      <h1 v-if="error.statusCode === 404">
+        {{ pageNotFound }}
+      </h1>
+      <h1 v-else>
+        {{ otherError }}
+      </h1>
+      <div class="flex flex-column justify-center align-center pa-10">
+        <NuxtLink to="/">
+          Principal
+          <v-img src="/Logos/verkel-logo.svg" width="60"></v-img>
+        </NuxtLink>
+      </div>
+    </v-container>
   </v-app>
 </template>
 
@@ -23,8 +28,8 @@ export default {
   },
   data () {
     return {
-      pageNotFound: '404 Not Found',
-      otherError: 'An error occurred'
+      pageNotFound: '404 Not Encontrado',
+      otherError: 'Un error ha ocurrido'
     }
   },
   head () {

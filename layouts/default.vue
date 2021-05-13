@@ -1,117 +1,91 @@
 <template>
-  <v-app dark>
-    <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
-      app
-    >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
-          <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-app-bar
-      :clipped-left="clipped"
-      fixed
-      app
-    >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
+  <v-app>
+      <v-app-bar
+        id="TheAppBar"
+        color="white"
+        :flat="$route.path === '/' ? true : false"
+        v-if="navbar"
+        height="75"
       >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="clipped = !clipped"
+        <TheContentForNavbar></TheContentForNavbar>  
+      </v-app-bar>
+      <TheMobileNavbar v-else />
+      
+      <v-main
+        id="contentContainer"
+        class="overflow-y-auto" 
       >
-        <v-icon>mdi-application</v-icon>
-      </v-btn>
-      <v-btn
-        icon
-        @click.stop="fixed = !fixed"
+
+        <v-container fluid>
+          <nuxt  />
+        </v-container>
+
+      </v-main>
+    
+      
+      <v-footer 
+        id="TheFooter"
+        class="mt-16"
+        color="rgba(119, 119, 119, 0.1)"
       >
-        <v-icon>mdi-minus</v-icon>
-      </v-btn>
-      <v-toolbar-title v-text="title" />
-      <v-spacer />
-      <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
-      >
-        <v-icon>mdi-menu</v-icon>
-      </v-btn>
-    </v-app-bar>
-    <v-main>
-      <v-container>
-        <nuxt />
-      </v-container>
-    </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
-  </v-app>
+        <TheContentForFooter></TheContentForFooter>
+      </v-footer>
+    </v-app>
 </template>
 
 <script>
+import TheContentForNavbar from '@/components/MainLayoutComponents/TheContentForNavbar';
+import TheContentForFooter from '@/components/MainLayoutComponents/TheContentForFooter'
+import TheMobileNavbar from '@/components/MainLayoutComponents/TheMobileNavbar'
+
 export default {
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
+  components: {
+    TheContentForNavbar,
+    TheContentForFooter,
+    TheMobileNavbar
+  },
+  computed: {
+    mobileNavbar() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return true
+        case 'sm': return true
+        case 'md': return false
+        case 'lg': return false
+        case 'xl': return false
+      }
+    },
+    navbar() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return false
+        case 'sm': return false
+        case 'md': return true
+        case 'lg': return true
+        case 'xl': return true
+      }
+    },
+  },
 }
 </script>
+
+<style>
+#TheAppBar{
+  z-index: 1;
+}
+
+.theme--light.v-application{
+  background-image: linear-gradient(to left, var(--v-firstbackground-base), var(--v-secondbackground-base)) !important;;
+}
+
+.v-bottom-navigation #TheBottomNav{
+  opacity: 0.1;
+}
+
+.verkelTransitionPages-enter-active, .home-leave-active {
+  transition: .5s;
+}
+
+.verkelTransitionPages-enter, .verkelTransitionPages-active {
+  opacity: 0;
+}
+
+</style>

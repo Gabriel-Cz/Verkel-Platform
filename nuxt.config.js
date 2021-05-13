@@ -3,8 +3,8 @@ import colors from 'vuetify/es5/util/colors'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - ThirdTest',
-    title: 'ThirdTest',
+    titleTemplate: '',
+    title: 'Verkel',
     htmlAttrs: {
       lang: 'en'
     },
@@ -44,11 +44,45 @@ export default {
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 
+  firebase: {
+    config: {
+      apiKey: "AIzaSyAVtkXLhULsH1u7dqBulK_GSTCzimuQkFE",
+      authDomain: "verkel-platform.firebaseapp.com",
+      databaseURL: "https://verkel-platform-default-rtdb.firebaseio.com",
+      projectId: "verkel-platform",
+      storageBucket: "verkel-platform.appspot.com",
+      messagingSenderId: "915224425610",
+      appId: "1:915224425610:web:c52b62e6d816a9e8ada973"
+    },
+  // ...
+  services: {
+    auth: false,
+    firestore: true,
+    storage: true,
+    firestore: {
+      memoryOnly: false, // default
+      chunkName: process.env.NODE_ENV !== 'production' ? 'firebase-auth' : '[id]', // default
+      enablePersistence: true,
+      emulatorPort: 8080,
+      emulatorHost: 'localhost',
+      settings: { 
+        // Firestore Settings - currently only works in SPA mode
+      }
+    },
+    auth: {
+      ssr: false
+    }
+    // ...
+  }
+},
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      options: {
+        customProperties: true
+      },
+      light: true,
       themes: {
         dark: {
           primary: colors.blue.darken2,
@@ -58,7 +92,14 @@ export default {
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
           success: colors.green.accent3
-        }
+        },
+        light: {
+          firstbackground: "#DBDBDB",
+          secondbackground: "#FFFFFF",
+          thirdbackground: "#DBDBDB",
+          fourthbackground: "#EAEAEA",
+          warning: '#F35D5D'
+        },
       }
     }
   },

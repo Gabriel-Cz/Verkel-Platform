@@ -1,11 +1,17 @@
 <template>
   <div>
     <TheMainPageHeader2></TheMainPageHeader2>
+    <TheCoursesSection></TheCoursesSection>
+    <TheTeachersSection></TheTeachersSection>
+    <TheEnterpriseSection></TheEnterpriseSection>
   </div>
 </template>
 
 <script>
 import TheMainPageHeader2 from '@/components/MainPageComponents/TheMainPageHeader2';
+import TheCoursesSection from '@/components/MainPageComponents/TheCoursesSection';
+import TheTeachersSection from '@/components/MainPageComponents/TheTeachersSection';
+import TheEnterpriseSection from '@/components/MainPageComponents/TheEnterpriseSection'
 
 export default {
   head () {
@@ -27,6 +33,9 @@ export default {
   layout: 'default',
   components: {
     TheMainPageHeader2,
+    TheCoursesSection,
+    TheTeachersSection,
+    TheEnterpriseSection,
   }
 }
 </script>
