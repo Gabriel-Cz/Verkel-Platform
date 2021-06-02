@@ -3,7 +3,7 @@
       <v-hover v-slot="{ hover }">
         <v-card 
           nuxt-link :to="'cursos/'+`${idDelCurso}`"
-          color="transparent"
+          color="#E3F2FD"
           link 
           style="font-family: Latee;">
             <v-card-title  

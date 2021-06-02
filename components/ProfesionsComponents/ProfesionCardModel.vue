@@ -2,7 +2,7 @@
     <div>
         <v-card
           @click="alert = !alert"
-          color="transparent" 
+          color="#E3F2FD" 
           style="font-family: Latee;">
             <v-card-title 
               class="d-flex justify-center">

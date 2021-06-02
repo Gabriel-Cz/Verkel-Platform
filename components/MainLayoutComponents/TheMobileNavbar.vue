@@ -51,7 +51,7 @@
                   outlined 
                   color="primary" 
                   class="loginBtns" 
-                  x-small
+                  small
                   @click="loginFormModalView(false)"
                 >
                     Registrarse
@@ -59,7 +59,7 @@
                 <v-btn 
                   text 
                   class="loginBtns ml-4" 
-                  x-small
+                  small
                   @click="loginFormModalView(true)"
                 >
                     Iniciar Sesion

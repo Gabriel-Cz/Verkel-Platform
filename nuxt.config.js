@@ -2,6 +2,9 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
+
+  target: process.env.TARGET || '', 
+
   head: {
     titleTemplate: '',
     title: 'Verkel',
@@ -46,7 +49,7 @@ export default {
 
   firebase: {
     config: {
-      apiKey: "AIzaSyAVtkXLhULsH1u7dqBulK_GSTCzimuQkFE",
+      apiKey: process.env.FIREBASE_API_KEY,
       authDomain: "verkel-platform.firebaseapp.com",
       databaseURL: "https://verkel-platform-default-rtdb.firebaseio.com",
       projectId: "verkel-platform",

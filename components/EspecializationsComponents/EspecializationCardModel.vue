@@ -3,7 +3,7 @@
         <v-card 
           @click="alert = !alert"
           :style="cardCustomStyle"
-          color="transparent" 
+          color="#E3F2FD" 
           style="font-family: Latee;">
             <v-card-title 
               :style="cardTitleCustomStyle"

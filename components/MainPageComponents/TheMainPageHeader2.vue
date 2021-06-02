@@ -24,7 +24,7 @@
                        Lorem Ipsum Dolor asitem asimet lorem.
                     </p>
                     <v-btn class="mt-5 mb-7 mt-md-10 mb-md-14" 
-                      :x-small="$vuetify.breakpoint.name === 'xs' ? true : false" 
+                      :small="$vuetify.breakpoint.name === 'xs' ? true : false" 
                       dark 
                       color="light-blue accent-4"
                       nuxt-link to="/about"
