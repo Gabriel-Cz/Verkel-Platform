@@ -183,7 +183,7 @@ export default {
 }
 
 .menuBtns:after {    
-  background: none repeat scroll 0 0 transparent;
+  background: none repeat scroll 0 0 rgba(25, 60, 175, 0.4);
   bottom: 0;
   content: "";
   display: block;
