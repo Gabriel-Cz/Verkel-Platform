@@ -89,7 +89,7 @@
                               </span>
                               <v-divider vertical></v-divider>
                               <span 
-                                class="span-Registrarse ml-3 pt-1 pointerHover"
+                                class="span-Registrarse ml-3 pt-2 pointerHover"
                               >
                                   Registrarse
                               </span>

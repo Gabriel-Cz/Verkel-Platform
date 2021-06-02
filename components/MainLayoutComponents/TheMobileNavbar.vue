@@ -46,7 +46,7 @@
 
         </v-list-item-group>
       </v-list>
-      <div class="d-flex align-center justify-center">
+      <div class="d-flex align-center justify-center mt-3 px-1">
         <v-btn
                   outlined 
                   color="primary" 
