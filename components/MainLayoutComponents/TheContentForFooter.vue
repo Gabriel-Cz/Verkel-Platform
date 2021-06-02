@@ -21,7 +21,7 @@
                 <v-col cols="12" md="5" sm="5" lg="4">
                     <div class="borders descriptionBorders text-subtitle-1">
                         <p class="pt-2 ">Sobre Verkel: </p>
-                         <b class="">{{ information.verkelDescription }}</b>
+                         <p class="">{{ information.verkelDescription }}</p>
                     </div>
                 </v-col>
                 <v-col class="d-flex justify-center align-center py-2">
@@ -52,7 +52,7 @@ export default {
            information: {
                email: "plataformaverkel@verkel.com",
                telNumber: "442 2445 555",
-               verkelDescription: "Prototipo desarollado para la cual seria una plataforma de capacitacion Latinoamericana."
+               verkelDescription: "Prototipo desarollado, basado en una Plataforma de Capacitacion Latinoamericana enfocada en el campo del Capital Humano."
            }
         }
     }
@@ -61,11 +61,8 @@ export default {
 
 <style scoped>
 
-
-
-
-
-
-
+.footerContainer {
+    border-top: solid 1px rgba(128, 128, 128, 0.5);
+}
 
 </style>
