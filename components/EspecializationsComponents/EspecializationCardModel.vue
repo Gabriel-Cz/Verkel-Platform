@@ -7,7 +7,7 @@
           style="font-family: Latee;">
             <v-card-title 
               :style="cardTitleCustomStyle"
-              class="d-flex justify-center">
+              class="d-flex justify-center border1">
                 {{ nombreDeLaEspecializacion }}
             </v-card-title>
             <v-img :src="imagenDeLaEspecializacion" height="150" >
@@ -49,5 +49,9 @@
 </script>
 
 <style scoped>
+
+.border1 {
+  border-bottom: ridge;
+}
 
 </style>

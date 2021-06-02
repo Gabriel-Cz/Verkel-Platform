@@ -7,7 +7,7 @@
           link 
           style="font-family: Latee;">
             <v-card-title  
-             class="d-flex justify-center">{{ nombreDelCurso }}</v-card-title>
+             class="d-flex justify-center border1">{{ nombreDelCurso }}</v-card-title>
             <v-img :src="imagenDelCurso" height="150" >
                 <v-expand-transition>
                     <div
@@ -49,3 +49,11 @@ export default {
 }
 
 </script>
+
+<style scoped>
+
+.border1 {
+  border-bottom: ridge;
+}
+
+</style>

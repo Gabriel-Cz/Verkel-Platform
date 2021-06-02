@@ -126,7 +126,7 @@ $divOverlayMobileBg: linear-gradient(180deg, #537CE3 0%, #728ACA 29.69%, rgba(87
 }
 
 .custom-shape-divider-top-1601490863 .shape-fill {
-    fill: #42509e;
+    fill: #64B5F6;
 }
 
 .shapeWhite {

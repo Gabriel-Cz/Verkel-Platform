@@ -5,7 +5,7 @@
           color="#ECEFF1" 
           style="font-family: Latee;">
             <v-card-title 
-              class="d-flex justify-center">
+              class="d-flex justify-center border1">
                 {{ nombreDeLaProfesion }}
             </v-card-title>
             <v-img :src="imagenDeLaProfesion" class="image" height="150" >
@@ -42,6 +42,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+.border1 {
+  border-bottom: ridge;
+}
 
 .image {
     position: relative;

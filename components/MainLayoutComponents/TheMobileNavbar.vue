@@ -92,14 +92,14 @@
                             </v-card-title>
                             <v-card-title v-else class="d-flex justify-center">
                               <span 
-                                class="mr-3 pt-2 text-subtitle-2 pointerHover" 
+                                class="mr-4 p-2 text-subtitle-2 pointerHover" 
                                 @click="loginFormView = true"
                               >
                                   Iniciar Sesion
                               </span>
                               <v-divider vertical></v-divider>
                               <span 
-                                class="span-Registrarse ml-3 pt-1 pointerHover"
+                                class="span-Registrarse mr-4 p-2 pointerHover"
                               >
                                   Registrarse
                               </span>
