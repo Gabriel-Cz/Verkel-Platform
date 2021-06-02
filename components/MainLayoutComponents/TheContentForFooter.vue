@@ -24,7 +24,7 @@
                     </div>
                 </v-col>
                 <v-col class="d-flex justify-center align-center py-2">
-                    <small><v-avatar size="22" class="mr-2"><v-img src="/Logos/verkel-logo.svg"></v-img></v-avatar> - 2020</small>
+                    <small><v-avatar size="22" class="mr-2"><v-img src="/Logos/verkel-logo.svg"></v-img></v-avatar>Verkel - 2020</small>
                 </v-col>
            </v-row>
         </v-container>
