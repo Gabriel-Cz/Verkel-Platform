@@ -14,18 +14,17 @@
                 </v-col>
                 <v-col cols="12" md="4" sm="4" lg="4"> 
                     <div class="borders text-subtitle-1 informationBorders">
-                        <p class="pt-2 pl-4">Contactanos: {{ information.email }}</p>
-                        <p class="mt-1 pl-4">Telefono: + {{ information.telNumber }}</p>
+                        <p class="pt-2 pl-4"><em>Contactanos:</em> {{ information.email }}</p>
+                        <p class="mt-1 pl-4"><em>Telefono: +</em> {{ information.telNumber }}</p>
                     </div>
                 </v-col>
                 <v-col cols="12" md="5" sm="5" lg="4">
                     <div class="borders descriptionBorders text-subtitle-1">
-                        <p class="pt-2 ">Sobre Verkel: </p>
-                         <p class="">{{ information.verkelDescription }}</p>
+                        <p class="pt-2 "><em>Sobre Verkel:</em> {{ information.verkelDescription }}</p>
                     </div>
                 </v-col>
                 <v-col class="d-flex justify-center align-center py-2">
-                    <small>Verkel - 2020</small>
+                    <small><v-avatar size="16" class="mr-2"><v-img src="/Logos/verkel-logo.svg"></v-img></v-avatar> Verkel - 2020</small>
                 </v-col>
            </v-row>
         </v-container>
