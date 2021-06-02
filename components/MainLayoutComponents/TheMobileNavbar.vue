@@ -46,11 +46,11 @@
 
         </v-list-item-group>
       </v-list>
-      <div class="d-flex align-center justify-center mt-3 px-1">
+      <div class="d-flex align-center justify-center mt-3">
         <v-btn
                   outlined 
                   color="primary" 
-                  class="loginBtns" 
+                  class="loginBtns mr-2" 
                   small
                   @click="loginFormModalView(false)"
                 >
@@ -58,7 +58,7 @@
                 </v-btn>
                 <v-btn 
                   text 
-                  class="loginBtns ml-4" 
+                  class="loginBtns ml-2" 
                   small
                   @click="loginFormModalView(true)"
                 >
