@@ -8,7 +8,7 @@
                     </p>
                 </div>
                 <div class="mt-10">
-                    <v-img class="mx-auto" :width="this.$vuetify.breakpoint.name === 'xs' ? '40%' : '25%'" src="./static/logos/verkel-logo-animation.svg"></v-img>
+                    <v-img class="mx-auto" :width="this.$vuetify.breakpoint.name === 'xs' ? '40%' : '25%'" src="/logos/verkel-logo-animation.svg"></v-img>
                 </div>
             </v-card>
         </v-container>
